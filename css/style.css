@@ -1,0 +1,113 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GENERAL*/
+body{
+    background-color: #d4dbdb;
+}
+.row-big{
+    height: 15vh;
+    background-color: #009688;
+}
+
+/*CONTAINER*/
+.container-big{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.col-left{
+    width: 35%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+}
+.col-right{
+    width: 65%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.avatar{
+    width: 50px;
+    border-radius: 50%;
+}
+
+/*COL-LEFT*/
+/*header*/
+.header-left{
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    background-color: rgb(239, 239, 239);
+    padding: 10px;
+}
+.personal-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.settings{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: rgb(164, 162, 162);
+}
+/*notifications*/
+.notifications{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #8edafc;
+    padding: 17px 20px;
+}
+.bell{
+    background-color: white;
+    color: #8edafc;
+    border-radius: 50%;
+    padding: 14px 12px;
+}
+.notifications p{
+    color: gray;
+    text-decoration: underline;
+}
+/*search*/
+.search-contact{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fafafa;
+}
+.search-lens{
+    padding: 5px 20px;
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+}
+.search-input input{
+    padding: 6px 8px;
+    width: 400px;
+    border: 1px solid rgb(200, 200, 200);
+}
+/*contacts*/
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 8px 20px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+.avatar-name{
+    display: flex;
+    gap: 15px;
+}
+.time{
+    color: rgb(164, 164, 164);
+}
