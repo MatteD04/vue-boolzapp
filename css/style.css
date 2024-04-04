@@ -9,14 +9,19 @@
 body{
     background-color: #d4dbdb;
 }
-.row-big{
+.ms-row-big{
     height: 15vh;
     background-color: #009688;
     position: relative;
 }
 
+/*HOVER*/
+.ms-contact:hover{
+    background-color: rgb(239, 239, 239);
+}
+
 /*CONTAINER*/
-.container-big{
+.ms-container-big{
     display: flex;
     width: 90%;
     margin: 0 auto;
@@ -25,7 +30,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.col-left{
+.ms-col-left{
     width: 35%;
     height: calc(100vh - 60px);
     display: flex;
@@ -35,7 +40,7 @@ body{
     flex-grow: 0;
     flex-shrink: 0;
 }
-.col-right{
+.ms-col-right{
     width: 65%;
     height: calc(100vh - 60px);
     overflow-y: auto;
@@ -45,26 +50,26 @@ body{
     flex-shrink: 0;
 }
 
-.avatar{
+.ms-avatar{
     width: 50px;
     border-radius: 50%;
 }
 
 /*COL-LEFT*/
 /*header*/
-.header-left{
+.ms-header-left{
     display: flex;
     padding-top: 10px;
     justify-content: space-between;
     background-color: rgb(239, 239, 239);
     padding: 10px;
 }
-.personal-profile{
+.ms-personal-profile{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.settings{
+.ms-settings{
     display: flex;
     align-items: center;
     gap: 13px;
@@ -72,75 +77,74 @@ body{
     font-size: 20px;
 }
 /*notifications*/
-.notifications{
+.ms-notifications{
     display: flex;
     align-items: center;
     gap: 10px;
     background-color: #8edafc;
     padding: 17px 20px;
 }
-.bell{
+.ms-bell{
     background-color: white;
     color: #8edafc;
     border-radius: 50%;
     padding: 14px 12px;
 }
-.notifications p{
+.ms-notifications p{
     color: gray;
     text-decoration: underline;
 }
 /*search*/
-.search-contact{
+.ms-search-contact{
     display: flex;
     padding: 10px;
     background-color: #fafafa;
     width: 100%;
 }
-.search-lens{
+.ms-search-lens{
     padding: 5px 20px;
     background-color: #fff;
     border: 1px solid rgb(200, 200, 200);
 }
-.search-input input{
+.ms-search-input input{
     padding: 6px 8px;
     border: 1px solid rgb(200, 200, 200);
 }
 /*contacts*/
-.contacts{
+.ms-contacts{
     flex-grow: 1;
     overflow-y: auto;
 }
-.contact{
+.ms-contact{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(200, 200, 200);
     padding: 15px 20px 8px 20px;
 
 }
-.avatar-name{
+.ms-avatar-name{
     display: flex;
     gap: 15px;
 }
-.time{
+.ms-time{
     color: rgb(164, 164, 164);
 }
 
 /*COL-RIGHT*/
 /*header-right*/
-.header-right{
+.ms-header-right{
     display: flex;
     padding-top: 10px;
     justify-content: space-between;
     background-color: rgb(239, 239, 239);
     padding: 10px;
-    height: 70px;
 }
-.avatar-chat{
+.ms-avatar-chat{
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.info-chat{
+.ms-info-chat{
     display: flex;
     align-items: center;
     gap: 13px;
@@ -148,27 +152,58 @@ body{
     font-size: 20px;
 }
 /*chat*/
-.chat-box{
-    height: calc(100vh - 197px);
+.ms-chat-box{
+    width: 100%;
+    height: calc(100vh - 201px);
     flex-grow: 1;
     overflow-y: auto;
     background-image: url(../img/img/mine.jpg);
+    padding-top: 50px;
+}
+.message{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+.text-mess{
+    padding: 15px;
+}
+.mess-time{
+    padding: 3px;
+    align-self: flex-end;
+    font-size: small;
+    color: rgb(160, 160, 160);;
+}
+.ms-mess-receved{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 8px 50px;
+}
+.my-mess{
+    display: flex;
+    justify-content: end;
+}
+.ms-mess-sent{
+    display: inline-block;
+    background-color: #d5f9ba;
+    border-radius: 10px;
+    margin: 8px 50px;
 }
 /*write message*/
-.footer-chat{
+.ms-footer-chat{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(239, 239, 239);
     gap: 30px;
     padding: 8px 30px;
-    height: 65px;
 }
-.footer-chat i{
+.ms-footer-chat i{
     color: rgb(95, 95, 95);
     font-size: 20px;
 }
-.write-mess input{
+.ms-write-mess input{
     padding: 18px;
     border-radius: 5px;
     border: none;

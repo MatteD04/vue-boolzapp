@@ -6,6 +6,8 @@
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <!--BOOTSTRAP-->
+
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,67 +17,82 @@
 <body>
     <div id="app">
 
-        <div class="row-big"></div>
+        <div class="ms-row-big"></div>
             <!--container della pagina-->
-            <div class="container-big">
+            <div class="ms-container-big">
                 <!--colonna dei contatti-->
-                <div class="col-left">
-                    <div class="header-left">
-                        <div class="personal-profile">
-                            <img class="avatar" src="img/img/avatar_io.jpg">
+                <div class="ms-col-left">
+                    <div class="ms-header-left">
+                        <div class="ms-personal-profile">
+                            <img class="ms-avatar" src="img/img/avatar_io.jpg">
                             <h4>Sofia</h4>
                         </div>
-                        <div class="settings">
+                        <div class="ms-settings">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div class="notifications">
-                        <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
+                    <div class="ms-notifications">
+                        <div class="ms-bell"><i class="fa-solid fa-bell-slash"></i></div>
                         <div>
                             <h4>Ricevi notifiche di nuovi messaggi</h4>
                             <p>Attiva notifiche desktop</p>
                         </div>
                     </div>
-                    <div class="search-contact">
-                        <div class="search-lens"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <div class="search-input"><input type="text" placeholder="Cerca o inizia una nuova chat"></div>
+                    <div class="ms-search-contact">
+                        <div class="ms-search-lens"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div class="ms-search-input"><input type="text" placeholder="Cerca o inizia una nuova chat"></div>
                     </div>
 
                     <!--contatti da stampare dinamicamente-->
-                    <div class="contacts">
-                        <div class="contact">
-                            <div class="avatar-name">
-                                <div><img class="avatar" src="img/img/avatar_1.jpg"></div>
+                    <div class="ms-contacts">
+                        <div v-for="singleName, index in contacts" class="ms-contact">
+                            <div class="ms-avatar-name">
+                                <div><img class="ms-avatar" :src="'img/img/avatar' + singleName.avatar + '.jpg'"></div>
                                 <div>
-                                    <h3>Michele</h3>
+                                    <h3>{{singleName.name}}</h3>
                                 </div>
                             </div>
-                            <div class="time"><p>12:00</p></div>
+                            <div class="ms-time"><p>12:00</p></div>
                         </div>
                     </div>
                 </div>
 
                 <!--colonna della chat-->
-                <div class="col-right">
-                    <div class="header-right">
-                        <div class="avatar-chat">
-                            <img class="avatar" src="img/img/avatar_1.jpg">
+                <div class="ms-col-right">
+                    <div class="ms-header-right">
+                        <div class="ms-avatar-chat">
+                            <img class="ms-avatar" src="img/img/avatar_1.jpg">
                             <h4>Michele</h4>
                         </div>
-                        <div class="info-chat">
+                        <div class="ms-info-chat">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div class="chat-box">
-                        
+                    <div class="ms-chat-box">
+                        <!--messaggio inviato-->
+                        <div class="ms-mess-receved">
+                            <div class="message">
+                                <div class="text-mess"><p>ciao</p></div>
+                                <div class="mess-time"><small>12:00</small></div>
+                            </div>
+                        </div><br>
+                        <!--messaggio ricevuto-->
+                        <div class="my-mess">
+                            <div class="ms-mess-sent">
+                                <div class="message">
+                                    <div class="text-mess"><p>ciao</p></div>
+                                    <div class="mess-time"><small>12:00</small></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer-chat">
+                    <div class="ms-footer-chat">
                         <div><i class="fa-regular fa-face-smile"></i></div>
-                        <div class="write-mess"><input type="text" placeholder="Scrivi un messaggio"></div>
+                        <div class="ms-write-mess"><input type="text" placeholder="Scrivi un messaggio"></div>
                         <div><i class="fa-solid fa-microphone"></i></div>
                     </div>
                 </div>
