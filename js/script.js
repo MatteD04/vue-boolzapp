@@ -85,11 +85,34 @@ createApp({
               },
             ],
             nameActive: 0,
+            newMex:'',
         };
     },
     methods: {
       selectName(index){
         this.nameActive = index;
+      },
+
+      //aggiunge un uovo messaggio
+      addNewMex(){
+        let newMessage = {
+          date: '10/01/2020 16:00',
+          message: this.newMex,
+          status: 'sent'
+        };
+        this.contacts[this.nameActive].messages.push(newMessage);
+        this.newMex = '';
+
+        //setTimeout per la risposta
+        setTimeout(() => {
+          const reply = {
+            date: '10/01/2020 16:00',
+            message: 'ciao a te',
+            status: 'received'
+          }
+          this.contacts[this.nameActive].messages.push(reply);
+
+        }, 1000)
       },
     }
 }).mount('#app');

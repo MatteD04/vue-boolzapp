@@ -80,26 +80,10 @@
                                 </p>
                             </div>
                         </div>
-                        <!--messaggio inviato
-                        <div class="ms-mess-receved">
-                            <div class="message">
-                                <div class="text-mess"><p>ciao</p></div>
-                                <div class="mess-time"><small>12:00</small></div>
-                            </div>
-                        </div><br>
-                        messaggio ricevuto
-                        <div class="my-mess">
-                            <div class="ms-mess-sent">
-                                <div class="message">
-                                    <div class="text-mess"><p>ciao</p></div>
-                                    <div class="mess-time"><small>12:00</small></div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="ms-footer-chat">
                         <div><i class="fa-regular fa-face-smile"></i></div>
-                        <div class="ms-write-mess"><input type="text" placeholder="Scrivi un messaggio"></div>
+                        <div class="ms-write-mess"><input type="text" placeholder="Scrivi un messaggio"  v-model="newMex" @keyUp.enter="addNewMex"></div>
                         <div><i class="fa-solid fa-microphone"></i></div>
                     </div>
                 </div>
