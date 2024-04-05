@@ -129,6 +129,9 @@ body{
 .ms-time{
     color: rgb(164, 164, 164);
 }
+.active{
+    background-color: rgb(231, 233, 236);
+}
 
 /*COL-RIGHT*/
 /*header-right*/

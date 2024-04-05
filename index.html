@@ -47,7 +47,7 @@
 
                     <!--contatti da stampare dinamicamente-->
                     <div class="ms-contacts">
-                        <div v-for="singleName, index in contacts" class="ms-contact">
+                        <div v-for="singleName, index in contacts" class="ms-contact" @click="selectName(index)" :class="index == nameActive ? 'active' : null">
                             <div class="ms-avatar-name">
                                 <div><img class="ms-avatar" :src="'img/img/avatar' + singleName.avatar + '.jpg'"></div>
                                 <div>
@@ -63,8 +63,8 @@
                 <div class="ms-col-right">
                     <div class="ms-header-right">
                         <div class="ms-avatar-chat">
-                            <img class="ms-avatar" src="img/img/avatar_1.jpg">
-                            <h4>Michele</h4>
+                            <img class="ms-avatar" :src="'img/img/avatar' + contacts[nameActive].avatar + '.jpg'">
+                            <h4>{{ contacts[nameActive].name }}</h4>
                         </div>
                         <div class="ms-info-chat">
                             <i class="fa-solid fa-magnifying-glass"></i>

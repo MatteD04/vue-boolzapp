@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+          activeItem: 0,
             contacts: [{
                 name: 'Michele',
                 avatar: '_1',
@@ -79,12 +80,16 @@ createApp({
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
                     status: 'received'
-                  }
+                  },
                 ],
               },
             ],
+            nameActive: 0,
         };
     },
     methods: {
+      selectName(index){
+        this.nameActive = index;
+      },
     }
 }).mount('#app');
