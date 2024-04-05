@@ -163,35 +163,31 @@ body{
     background-image: url(../img/img/mine.jpg);
     padding-top: 50px;
 }
-.message{
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-}
-.text-mess{
+
+.chat-mexage p{
+    width: 300px;
     padding: 15px;
-}
-.mess-time{
-    padding: 3px;
-    align-self: flex-end;
-    font-size: small;
-    color: rgb(160, 160, 160);;
-}
-.ms-mess-receved{
-    display: inline-block;
-    background-color: #fff;
+    clear: both;
     border-radius: 10px;
-    margin: 8px 50px;
+    font-size: 20px;
+    position: relative;
+    margin: 8px 40px;
 }
-.my-mess{
-    display: flex;
-    justify-content: end;
+
+.chat-mexage p.received{
+    background-color: white;
+    float: left;
+    position: relative;
 }
-.ms-mess-sent{
-    display: inline-block;
+.chat-mexage p.sent{
     background-color: #d5f9ba;
-    border-radius: 10px;
-    margin: 8px 50px;
+    float: right;
+    position: relative;
+}
+.time-messages{
+    margin-left: 250px;
+    font-size: small;
+    color: gray;
 }
 /*write message*/
 .ms-footer-chat{
