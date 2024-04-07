@@ -42,7 +42,7 @@
                     </div>
                     <div class="ms-search-contact">
                         <div class="ms-search-lens"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <div class="ms-search-input"><input type="text" placeholder="Cerca o inizia una nuova chat"></div>
+                        <div class="ms-search-input"><input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keyUp="searchName"></div>
                     </div>
 
                     <!--contatti da stampare dinamicamente-->

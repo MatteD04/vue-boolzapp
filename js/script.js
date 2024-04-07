@@ -86,6 +86,7 @@ createApp({
             ],
             nameActive: 0,
             newMex:'',
+            search:'',
         };
     },
     methods: {
@@ -114,5 +115,18 @@ createApp({
 
         }, 1000)
       },
+      
+      //funzione per cercare i contatti
+      searchName(){
+        //variabile per salvare i dati in input
+        const userSearch = this.search.toLowerCase();
+        this.contacts.forEach((user, i) => {
+            if(user.name.toLowerCase().includes(userSearch)){
+              
+            }else {
+            }
+        });
+
+      }
     }
 }).mount('#app');
